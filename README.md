@@ -1,29 +1,68 @@
-# Unified Fabric Defect Detection & Lead Time Prediction Framework
+# 🎨 Unified Fabric Defect Detection & Lead Time Prediction Framework
 
-A smart manufacturing framework that combines computer vision (YOLO-based defect detection) with machine learning (lead time prediction) to close the traditional integration gap between vision systems and production planning systems. The framework continuously monitors fabric quality and dynamically adjusts lead time predictions based on real-time defect density data.
+[![Framework](https://img.shields.io/badge/Framework-YOLO%2B%20Random%20Forest-blue.svg)](https://github.com/ultralytics)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-Research%20Purpose-purple.svg)](LICENSE)
+[![GPU](https://img.shields.io/badge/GPU-CUDA%20Enabled-orange.svg)](https://developer.nvidia.com/cuda-zone)
+
+> **Smart Manufacturing Integration**: Closing the gap between computer vision defect detection and production planning systems through real-time Defect Density Score (D_s) feedback.
 
 ---
 
-## Table of Contents
+## 🔗 Download Full Trained Project
 
-1. [Project Overview](#project-overview)
-2. [Problem Statement](#problem-statement)
-3. [Solution Architecture](#solution-architecture)
-4. [File Structure](#file-structure)
-5. [Installation & Setup](#installation--setup)
-6. [Component Details](#component-details)
-   - [config.py](#configpy)
-   - [defect_detection.py](#defect_detectionpy)
-   - [metadata_bridge.py](#metadata_bridgepy)
-   - [lead_time_predictor.py](#lead_time_predictorpypy)
-   - [integration.py](#integrationpy)
-7. [How It Works](#how-it-works)
-8. [The Integration Loop](#the-integration-loop)
-9. [Configuration Reference](#configuration-reference)
-10. [Usage](#usage)
-11. [Key Concepts](#key-concepts)
-12. [Performance Metrics](#performance-metrics)
-13. [Troubleshooting](#troubleshooting)
+> **⚠️ IMPORTANT**: The GitHub repository contains only the lightweight source code. Large files (trained models, datasets, YOLO weights) are hosted on Google Drive to keep the repo small and clone-friendly.
+
+### 📦 Complete Project Package
+
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-Download%20Full%20Project-34A853?style=for-the-badge&logo=google-drive)](https://drive.google.com/drive/folders/1vCdl2v5ODnb-S5Mi_Cfh2Nv1rqKaRU5G?usp=drive_link)
+
+**Google Drive contains everything you need:**
+- ✅ Trained YOLO classifier weights (`best.pt`)
+- ✅ Complete Fabric Defects Dataset (all defect classes)
+- ✅ Pre-trained YOLO model weights (`yolo11n.pt`, `yolov8n.pt`)
+- ✅ Training outputs (`runs/classify/train/`)
+- ✅ All trained assets and configuration files
+- ✅ Complete project with all dependencies resolved
+
+---
+
+## 🚀 Setup Instructions
+
+### Option A: Lightweight GitHub Version (Source Code Only)
+
+For developers who want to **train their own models** or integrate the framework:
+
+```bash
+# Clone the repository
+git clone https://github.com/oyon79/Fabric-Defect-Detection_And_Lead-Time-Prediction.git
+cd Fabric-Defect-Detection_And_Lead-Time-Prediction
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the framework
+python integration.py
+```
+
+> **Note:** You will need to train your own YOLO classifier and prepare your dataset.
+
+---
+
+### Option B: Full Trained Project from Google Drive (Recommended)
+
+For **immediate testing** with pre-trained models and complete dataset:
+
+1. **Download from Google Drive** using the button above
+2. **Extract** the downloaded folder
+3. **Copy** all contents to your project directory
+4. **Run:**
+
+```bash
+cd Fabric-Defect-Detection_And_Lead-Time-Prediction
+pip install -r requirements.txt
+python integration.py
+```
 
 ---
 
